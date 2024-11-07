@@ -1,0 +1,56 @@
+1 - > open eclipse and clone from https://github.com/ShariqSp/auth.git
+    
+   1.1 -> goto file and click on import
+   1.2 -> search for git and select project from git and next
+   1.3 -> select clone from URi and click on next
+   1.4 -> enter project url and click on next 
+   1.5 -> select master click on next 
+   1.6 -> click on browse select a folder and click on save and click on next 
+   1.7 -> click on next and finish
+
+2 -> select login project click on export and search for war and select war click on next and select destination and click on finish
+
+3 -> create database server, login , install MySQL server and create database and tables   
+
+4 -> create app server , 
+     login , 
+     download apache tomcat from https://tomcat.apache.org/download-11.cgi [or use the below command --> wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.0/bin/apache-tomcat-11.0.0.zip]
+     extract the zip file
+     if zip package is not installed install it using apt install zip -y 
+     unzip zip file using unzip apache-tomcat-11.0.0.zip
+     install java -> apt-get update  
+                     apt install openjdk-21-jdk -y
+     cd apache-tomcat-11.0.0/bin/
+     give permission to startup.sh and Catalina.sh or try --> [ chmod 777 * ]
+     set custom tcp 8080 in inbound rules
+     goto bin folder and execute sh startup.sh 
+     wait for some time and in browser enter your appserver ipadd along with :8080 example http://54.226.210.3:8080/
+     now here we have to set password 
+     
+      For Tomcat v8.5.4 and above, the file <tomcat>/webapps/manager/META-INF/context.xml has been adjusted:
+
+<Context antiResourceLocking="false" privileged="true" >
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+</Context>
+
+Change this file to comment the Valve:
+
+<Context antiResourceLocking="false" privileged="true" >
+    <!--
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+    -->
+</Context>
+
+     goto conf/tomcat-users.xml 
+ 
+     add this line  <user username="admin" password="admin" roles="manager-gui"/>  save and exit
+
+     shutdown apache tomcat and start it once again 
+ 
+
+     open http://54.226.210.3:8080/ and select manger and enter user name and password
+    
+     now upload the war file you have created 
+ 
