@@ -1,3 +1,4 @@
+create database student;
 create table student.login (unamme varchar(20),pword varchar(20));
 insert into student.login values("shariq","1234");
 select * from student.login;
