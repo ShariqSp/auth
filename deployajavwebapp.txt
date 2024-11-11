@@ -53,4 +53,17 @@ Change this file to comment the Valve:
      open http://54.226.210.3:8080/ and select manger and enter user name and password
     
      now upload the war file you have created 
- 
+
+
+
+
+--------------------*******************************************-----------------------------------------
+mysql -root -p
+enter your password : root
+CREATE USER 'shariq'@'yourIP' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'yourIP';
+FLUSH PRIVILEGES;
+
+mysql -u username -p -h 54.90.138.180
+
+
