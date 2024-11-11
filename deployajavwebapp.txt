@@ -58,7 +58,7 @@ Change this file to comment the Valve:
 
 
 --------------------*******************************************-----------------------------------------
-mysql -root -p
+mysql -u root -p
 enter your password : root
 --------create user with previlage------
 CREATE USER 'shariq'@'yourIP' IDENTIFIED BY 'password';
