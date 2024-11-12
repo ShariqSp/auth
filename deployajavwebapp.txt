@@ -75,6 +75,19 @@ mysql -u username -p -h 54.90.138.180
 CREATE USER 'your_db_username'@'%' IDENTIFIED BY '1234';
 GRANT ALL PRIVILEGES ON your_database.* TO 'your_db_username'@'%';
 FLUSH PRIVILEGES;
-
+Edit the MySQL configuration file to allow connections from remote IP addresses:
+Open my.cnf or mysqld.cnf, typically located in /etc/mysql/ or /etc/mysql/mysql.conf.d/.
+Look for the bind-address line, which may look like this:
+ini
+Copy code
+bind-address = 127.0.0.1
+Change 127.0.0.1 to 0.0.0.0 to allow connections from any IP address:
+ini
+Copy code
+bind-address = 0.0.0.0
+Save the file and restart the MySQL service:
+bash
+Copy code
+sudo systemctl restart mysql
 ---------------********************---------------------------
 
