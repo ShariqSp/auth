@@ -80,7 +80,9 @@ mysql -u username -p -h 54.90.138.180
 
 
 -------------*******************----------------------
-
+in gitbash login to app server 
+using app server login to db servers databse as db user that u have created in db servers.
+-------------*******************---------------------------
 CREATE USER 'your_db_username'@'%' IDENTIFIED BY '1234';
 GRANT ALL PRIVILEGES ON your_database.* TO 'your_db_username'@'%';
 FLUSH PRIVILEGES;
