@@ -45,7 +45,16 @@ Change this file to comment the Valve:
 
      goto conf/tomcat-users.xml 
  
-     add this line  <user username="admin" password="admin" roles="manager-gui"/>  save and exit
+     add this line 
+ <!-- Define roles -->
+    <role rolename="manager-gui"/>
+    <role rolename="admin-gui"/>
+    
+    <!-- Define users and assign them roles -->
+    <user username="admin" password="admin_password" roles="admin-gui"/>
+    <user username="manager" password="manager_password" roles="manager-gui"/>
+
+save and exit
 
      shutdown apache tomcat and start it once again 
  
