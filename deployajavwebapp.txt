@@ -101,4 +101,25 @@ bash
 Copy code
 sudo systemctl restart mysql
 ---------------********************---------------------------
+deploying only backend application [spring app with database]
+--------------------------------------------------------------
+1. create a testing server 
+2. login into it
+3. install all softwares -> mysql java17 maven [apt install mysql-server openjdk-17-jdk maven -y]
+4. in mysql create user and database with table 
+   
+    CREATE DATABASE UserDB;
 
+    USE UserDB;
+    
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) UNIQUE NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        mobile VARCHAR(15),
+        password VARCHAR(100) NOT NULL
+    );
+
+5. clone java code from github : https://github.com/ShariqSp/postmanAPICRUD.git
+6. build the jar : mvn clean install
+7. execute jar : java -jar pathtotarget/your_jar_file.jar
