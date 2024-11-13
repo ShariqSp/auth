@@ -121,5 +121,5 @@ deploying only backend application [spring app with database]
     );
 
 5. clone java code from github : https://github.com/ShariqSp/postmanAPICRUD.git
-6. build the jar : mvn clean install
+6. build the jar :enter into cloned folder and then execute : mvn clean install
 7. execute jar : java -jar pathtotarget/your_jar_file.jar
