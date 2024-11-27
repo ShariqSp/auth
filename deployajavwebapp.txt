@@ -84,7 +84,7 @@ in gitbash login to app server
 using app server login to db servers databse as db user that u have created in db servers.
 -------------*******************---------------------------
 CREATE USER 'shariq'@'%' IDENTIFIED BY '1234';
-GRANT ALL PRIVILEGES ON *.* TO 'your_db_username'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'shariq'@'%';
 FLUSH PRIVILEGES;
 Edit the MySQL configuration file to allow connections from remote IP addresses:
 Open my.cnf or mysqld.cnf, typically located in /etc/mysql/ or /etc/mysql/mysql.conf.d/.
