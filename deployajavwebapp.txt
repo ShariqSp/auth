@@ -123,3 +123,31 @@ deploying only backend application [spring app with database]
 5. clone java code from github : https://github.com/ShariqSp/postmanAPICRUD.git
 6. build the jar :enter into cloned folder and then execute : mvn clean install
 7. execute jar : java -jar pathtotarget/your_jar_file.jar
+
+
+-------------------------------------------------------------------------------------------------------
+
+apt-get update 
+apt install zip -y
+
+apt install mysql-server openjdk-17-jdk -y
+
+
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.zip
+
+unzip apache-tomcat-9.0.97.zip
+
+chmod 777 apache-tomcat-9.0.97/bin/*
+
+sh apache-tomcat-9.0.97/bin/startup.sh
+
+nano apache-tomcat-9.0.97/conf/tomcat-users.xml
+
+nano apache-tomcat-9.0.97/webapps/manager/META-INF/context.xml
+
+sh apache-tomcat-9.0.97/bin/shutdown.sh
+sh apache-tomcat-9.0.97/bin/startup.sh
+
+
+deploying a full stack application with load balancing
+
